@@ -1,0 +1,77 @@
+.header {
+    padding: 20px 0;
+    margin: 0 0 80px;
+
+    @include for-size(tablet-only) {
+        padding: 10px 0;
+        margin: 0 0 40px;
+    }
+
+    & .container {
+        @include flex(flex, center, space-between);
+    
+        @include for-size(tablet-only) {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    &__logo {
+        @include for-size(tablet-only) {
+            margin: 0 0 20px;
+        }
+    }
+
+    &__btn {
+        width: 96px;
+        padding: 8px 20px;
+    
+        @include font(500, 16px, 1.5, -0.25px);
+    
+        color: $primary-btn-text-color;
+        background: $primary-btn-bg-color;
+        box-shadow: 0px 1px 3px rgba(25, 32, 44, 0.04);
+        border-radius: 2px;
+    }
+    
+    &__btn:focus,
+    &__btn:hover,
+    &__btn:active {
+        background: rgba($primary-btn-bg-color, 0.8)
+    }
+}
+
+.header__list {
+    @include flex(flex, center, unset);
+
+    @include for-size(tablet-only) {
+        @include flex(flex, center, center);
+    }
+
+    &-item {
+        @include font(400, 16px, 1.5, unset);
+    
+        color: $secondary-btn-text-color;
+    
+        cursor: pointer;
+    }
+    
+    &-item:first-child {
+        margin: 0 48px 0 0;
+    
+        @include for-size(tablet-only) {
+            margin: 0 28px 0 0;
+        }
+    }
+    
+    &-item:focus,
+    &-item:hover,
+    &-item:active {
+        color: $primary-btn-text-color;
+    }
+}
+
+
+
+
+

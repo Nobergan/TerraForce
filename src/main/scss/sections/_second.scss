@@ -1,0 +1,172 @@
+.second {
+    margin: 0 0 80px;
+
+    @include for-size(tablet-only) {
+        margin: 0 0 40px;
+    }
+
+    & .container {
+        padding: 0 15px 80px;
+    
+        border-bottom: 1px solid #33363A;
+    
+        @include for-size(tablet-only) {
+            padding: 0 15px 40px;
+        }
+    }
+    
+    &__accent {
+        width: 186px;
+        padding: 4px 12px;
+        margin: 0 auto 16px;
+    
+        @include font(600, 14px, 1.5, unset);
+    
+        color: $accent-text-color;
+        background: $accent-bg-color;
+        box-shadow: 0px 1px 3px rgba(25, 32, 44, 0.04);
+        border-radius: 15px;
+    }
+    
+    &__title {
+        margin: 0 0 16px;
+    
+        @include font(800, 40px, 1.25, -0.5px);
+        text-align: center;
+    
+        color: $primary-title-color;
+        
+        @include for-size(tablet-only) {
+            @include font(800, 30px, 1.25, -0.5px);
+        }
+    }
+    
+    &__descr {
+        width: 660px;
+        margin: 0 auto 80px;
+    
+        @include font(400, 20px, 1.5, -0.25px);
+        text-align: center;
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 40px;
+            @include font(400, 16px, 1.5, -0.25px);
+        }
+    }
+}
+
+.second__list-item {
+    @include flex(flex, center, space-between);
+
+    @include for-size(tablet-only) {
+       display: block;
+    }
+
+    &:not(:last-child) {
+        margin: 0 0 80px;
+    
+        @include for-size(tablet-only) {
+            margin: 0 0 40px;
+         }
+    }
+    
+    &:nth-child(even) {
+        @include for-size(tablet-only) {
+            display: flex;
+            flex-direction: column-reverse;
+         }
+    }
+
+    & .second__item-box {
+        min-width: 500px;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            min-width: unset;
+            margin: 0 auto 15px;
+         }
+    }
+    
+    & .second__item-img {
+        max-width: 510px;
+        margin: 0 64px 0 0;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+         }
+    }
+    
+    & .second__item-img:nth-child(even) {
+        margin: 0 0 0 64px;
+    
+        @include for-size(tablet-only) {
+            margin: 0 auto;
+         }
+    }
+    
+    & .second__item-accent {
+        margin: 0 0 8px;
+    
+        font-family: 'Architects Daughter';
+        @include font(400, 20px, 1.5, 0.25px);
+    
+        color: $secondary-text-color;
+    
+        @include for-size(tablet-only) {
+            @include font(400, 16px, 1.5, 0.25px);
+         }
+    }
+    
+    & .second__item-title {
+        margin: 0 0 9px;
+    
+        @include font(700, 32px, 1.3, -0.25px);
+    
+        color: $primary-title-color;
+    
+        @include for-size(tablet-only) {
+            @include font(700, 24px, 1.3, -0.25px);
+         }
+    }
+    
+    & .second__item-descr {
+        margin: 0 0 16px;
+    
+        @include font(400, 20px, 1.5, -0.25px);
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            @include font(400, 16px, 1.5, -0.25px);
+         }
+    }
+}
+
+.second__list {
+    & .item__list-item {
+        margin: 0 0 8px;
+    
+        @include font(400, 18px, 1.5, -0.25px);
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            @include font(400, 14px, 1.5, -0.25px);
+         }
+    }
+    
+    & .item__list-item::before {
+        content: url('../../img/second/second-svg.svg');
+        width: 12px;
+        max-height: 9px;
+        margin-right: 8px;
+    }
+}
+

@@ -1,0 +1,120 @@
+.third {
+    padding: 0;
+    margin: 0 0 80px;
+
+    @include for-size(tablet-only) {
+        margin: 0 0 40px;
+        padding: 0 15px;
+    }
+
+    &__title {
+        margin: 0 0 16px;
+    
+        @include font(800, 40px, 1.25, -0.5px);
+        text-align: center;
+    
+        color: $primary-title-color;
+    
+        @include for-size(tablet-only) {
+            @include font(800, 30px, 1.25, -0.5px);
+        }
+    }
+    
+    &__descr {
+        width: 768px;
+        margin: 0 auto 80px;
+    
+        @include font(400, 20px, 1.5, -0.25px);
+        text-align: center;
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 40px;
+    
+            @include font(400, 16px, 1.5, -0.25px);
+        }
+    }
+    
+    &__cards-container {
+        @include flex(flex, center, space-between);
+    
+        @include for-size(tablet-only) {
+            display: block;
+        }
+    }
+    
+    &__card-box {
+        max-width: 352px;
+        padding: 24px 24px 20px;
+        margin: 0;
+    
+        background: $cards-bg-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 15px;
+        }
+    }
+    
+    &__img {
+        margin: 0 0 16px;
+    }
+    
+    &__card-body {
+        padding: 0 0 24px;
+    
+        border-bottom: 1px solid $secondary-btn-bg-color;
+    }
+    
+    &__card-descr {
+        margin: 0;
+    
+        @include font(400, 18px, 1.5, -0.25px);
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            @include font(400, 14px, 1.5, -0.25px);
+        }
+    }
+}
+
+.third__card-footer {
+    padding: 20px 0 0 0;
+    margin: 0;
+
+    & .name {
+        @include font(500, 16px, 1.5, -0.25px);
+    
+        color: $primary-title-color;
+    
+        @include for-size(tablet-only) {
+            @include font(500, 12px, 1.5, -0.25px);
+        }
+    }
+    
+    & .space {
+        @include font(400, 16px, 1.5, -0.25px);
+    
+        color: $secondary-btn-bg-color;
+    
+        @include for-size(tablet-only) {
+            @include font(400, 12px, 1.5, -0.25px);
+        }
+    }
+    
+    & .pos {
+        @include font(500, 16px, 1.5, -0.25px);
+    
+        color: $secondary-text-color;
+    
+        @include for-size(tablet-only) {
+            @include font(500, 12px, 1.5, -0.25px);
+        }
+    }
+}
+

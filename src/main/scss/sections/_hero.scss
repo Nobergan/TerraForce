@@ -1,0 +1,128 @@
+.hero {
+    padding: 0 0 64px;
+    margin: 0 0 64px;
+
+    background-image: url('../../img/hero/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: 10% 100%;
+
+    @include for-size(tablet-only) {
+        padding: 0 0 22px;
+        margin: 0 0 22px;
+    }
+
+    &__title {
+        width: 768px;
+        margin: 0 auto 16px;
+    
+        @include font(800, 52px, 1.2, -0.5px);
+    
+        color: $primary-title-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 16px;
+    
+            @include font(800, 30px, 1.2, -0.5px);
+            text-align: center;
+        }
+    }
+    
+    &__descr {
+        width: 650px;
+        margin: 0 auto 32px;
+    
+        @include font(400, 20px, 1.2, -0.25px);
+        text-align: center;
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 32px;
+    
+            @include font(400, 16px, 1.2, -0.25px);
+        }
+    }
+
+    &__btns-box {
+        margin: 0 0 64px;
+    
+        @include flex(flex, center, center);
+    
+        @include for-size(tablet-only) {
+            display: block;
+            margin: 0 0 44px;
+        }
+    }
+
+    &__video-container {
+        width: 1024px;
+        height: 576px;
+        margin: 0 auto;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            height: unset;
+        }
+    }
+    
+    &__video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hero__btn {
+    padding: 12px 32px;
+
+    @include font(500, 16px, 1.5, -0.25px);
+
+    border-radius: 2px;
+    box-shadow: 0px 10px 15px -3px rgba(21, 23, 25, 0.16);
+
+    &-left {
+        width: 167px;
+        margin: 0 12px 0 0;
+    
+        color: $primary-btn-text-color;
+        background: $primary-btn-bg-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 12px; 
+        }
+    }
+    
+    &-left:focus,
+    &-left:hover,
+    &-left:active {
+        background:rgba($primary-btn-bg-color, 0.8)
+    }
+    
+    &-right {
+        width: 149px;
+    
+        color: $secondary-btn-text-color;
+        background: $secondary-btn-bg-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto; 
+        }
+    }
+    
+    &-right:focus,
+    &-right:hover,
+    &-right:active {
+        background:rgba($secondary-btn-bg-color, 0.8)
+    }
+}
+
+
+

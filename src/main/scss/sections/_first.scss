@@ -1,0 +1,116 @@
+.first {
+    margin: 0 0 80px;
+
+    @include for-size(tablet-only) {
+        margin: 0 0 40px;
+    }
+
+    & .container {
+        padding: 0 15px 80px;
+    
+        border-bottom: 1px solid #33363A;
+    
+        @include for-size(tablet-only) {
+            padding: 0 15px 40px;
+        }
+    }
+    
+    &__title {
+        margin: 0 0 17px;
+    
+        @include font(800, 40px, 1.25, -0.5px);
+        text-align: center;
+    
+        color: $primary-title-color;
+    
+        @include for-size(tablet-only) {
+            @include font(800, 30px, 1.25, -0.5px);
+        }
+    }
+    
+    &__descr {
+        max-width: 768px;
+        margin: 0 auto 80px;
+    
+        @include font(400, 20px, 1.5, -0.25px);
+        text-align: center;
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 40px;
+    
+            @include font(400, 16px, 1.5, -0.25px);
+        }
+    }
+    
+    &__cards-container {
+        @include for-size(tablet-only) {
+            display: block;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.first__card-box {
+    margin-top: 0;
+
+    @include for-size(tablet-only) {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 15px;
+    }
+
+    &:nth-child(-n + 3) {
+        margin-bottom: 64px;
+    
+        @include for-size(tablet-only) {
+            margin-bottom: 15px;
+        }
+      }
+  }
+
+.first__card {
+    text-align: center;
+
+    & .card__img {
+        width: 64px;
+        height: 64px;
+        margin: 0 0 16px;
+    
+        @include for-size(tablet-only) {
+            width: 42px;
+            height: 42px;
+        }
+    }
+    
+    &-title {
+        margin: 0 0 8px;
+    
+        @include font(700, 24px, 1.4, -0.25px);
+    
+        color: $primary-title-color;
+    
+        @include for-size(tablet-only) {
+            @include font(700, 18px, 1.4, -0.25px);
+        }
+    }
+    
+    &-descr {
+        margin: 0;
+    
+        @include font(400, 18px, 1.5, -0.25px);
+    
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            @include font(400, 14px, 1.5, -0.25px);
+        }
+    }
+}
+

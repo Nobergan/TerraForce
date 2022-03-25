@@ -1,0 +1,134 @@
+.footer {
+    padding: 0;
+    margin: 0 0 63px;
+
+    @include for-size(tablet-only) {
+        margin: 0 0 33px;
+    }
+
+    &__logo {
+        margin: 0 0 14px;
+    }
+    
+    &__descr {
+        margin: 0;
+    
+        @include font(400, 16px, 1.5, -0.25px);
+        
+        color: $primary-text-color;
+    
+        @include for-size(tablet-only) {
+            margin-bottom: 20px;
+            @include font(400, 14px, 1.5, -0.25px);
+        }
+    }
+
+    &_list:not(:last-child) {
+        margin: 0 80px 0 0;
+    
+        @include for-size(tablet-only) {
+            margin: 0 0 15px;
+        }
+    }
+    
+    &_list-title {
+        margin: 0 0 4px;
+        
+        @include font(500, 14px, 1.5, unset);
+    
+        color: $primary-title-color;
+    }
+    
+    &_list-item {
+        margin: 0 0 4px;
+    
+        @include font(400, 14px, 1.5, unset);
+    
+        color: $primary-text-color;
+    }
+    
+    &_list-item:last-child {
+        margin: 0;
+    }
+    
+    &_list-item a {
+        color: inherit;
+    }
+    
+    &_list-item a:focus,
+    &_list-item a:hover,
+    &_list-item a:active {
+        color: #ffffff;
+    }
+
+    &__rights {
+        min-width: 255px;
+        margin: 0;
+    
+        @include font(400, 14px, 1.5, unset);
+        
+        color: $primary-text-color;
+    }
+}
+
+.footer__top {
+    @include flex(flex, top, space-between);
+    margin: 0 0 48px;
+
+    @include for-size(tablet-only) {
+        display: block;
+        margin: 0 0 24px;
+    }
+
+    &-left {
+        width: 352px;
+    
+        @include for-size(tablet-only) {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &-right {
+        @include flex(flex, top, space-between);
+    
+        @include for-size(tablet-only) {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.footer__bottom {
+    @include flex(flex, center, space-between);
+
+    @include for-size(tablet-only) {
+        flex-direction: column-reverse;
+    }
+}
+
+.footer__social {
+    @include flex(flex, center, unset);
+
+    @include for-size(tablet-only) {
+        margin: 0 auto 20px;
+    }
+
+    &-link:hover,
+    &-link:focus,
+    &-link:active {
+        opacity: 0.8;
+    }
+
+    &-link:not(:last-child) {
+        margin: 0 16px 0 0;
+    }
+
+    &-link svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
