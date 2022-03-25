@@ -8,7 +8,7 @@ function validateEmail(email) {
 
 // send form
 function sendForm() {
-    $(".fourth__btn").text("Form sending...").fadeIn();
+    $(".fourth__btn").text("E-mail sending...").fadeIn();
     setTimeout(function () {
         $(".fourth__btn").text("Sent").fadeIn();
     }, 2000);
@@ -25,7 +25,7 @@ function validate() {
         sendForm();
     } else {
         $error.fadeIn();
-        $error.text(email + " is not valid");
+        $error.text(email + " E-mail is not valid");
     }
     return false;
 }
